@@ -21,18 +21,6 @@ jobs:
           - goos: linux
             goarch: arm64
             output: doc-builder-linux-arm64
-          - goos: darwin
-            goarch: amd64
-            output: doc-builder-darwin-amd64
-          - goos: darwin
-            goarch: arm64
-            output: doc-builder-darwin-arm64
-          - goos: windows
-            goarch: amd64
-            output: doc-builder-windows-amd64.exe
-          - goos: windows
-            goarch: arm64
-            output: doc-builder-windows-arm64.exe
 
     steps:
       - name: Checkout code
@@ -108,15 +96,11 @@ jobs:
             ### Downloads
             - Linux AMD64: `doc-builder-linux-amd64.tar.gz`
             - Linux ARM64: `doc-builder-linux-arm64.tar.gz`
-            - macOS AMD64: `doc-builder-darwin-amd64.tar.gz`
-            - macOS ARM64: `doc-builder-darwin-arm64.tar.gz`
-            - Windows AMD64: `doc-builder-windows-amd64.exe.zip`
-            - Windows ARM64: `doc-builder-windows-arm64.exe.zip`
             
             ### Installation
-            1. Download the appropriate binary for your platform
-            2. Extract the archive
-            3. Make the binary executable (Unix systems): `chmod +x doc-builder-*`
+            1. Download the appropriate binary for your Linux system (AMD64 or ARM64)
+            2. Extract the archive: `tar -xzf doc-builder-linux-*.tar.gz`
+            3. Make the binary executable: `chmod +x doc-builder-linux-*`
             4. Move to your PATH or use directly
             
             ### Verification
