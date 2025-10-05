@@ -8,7 +8,6 @@ manual steps.
 ## TODO
 
 - [ ] dopisanie testow jednostkowych
-- [ ] github workflows ktory zbuduje paczki i instrukcja jak je uruchomic w innym workflow
 
 ## Features
 
