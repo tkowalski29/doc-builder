@@ -13,11 +13,14 @@ bin/
 .codex/**/*
 .spec/*
 
-# DOC
-build-docs.sh
+## DOC
 .doc/.vitepress/dist/
 .doc/.vitepress/.temp/
 .doc/.vitepress/cache/
 .doc/.vitepress/config.js
 .doc/node_modules/
 .doc/temp/
+
+## EXAMPLE
+example/doc-builder
+example/../config.js
