@@ -5,10 +5,6 @@ CLI. It scans a project for prefixed markdown files, assembles a temporary ViteP
 workspace, and produces a ready-to-ship `dist` directory without requiring any
 manual steps.
 
-## TODO
-
-- [ ] dopisanie testow jednostkowych
-
 ## Features
 
 - Discover markdown files whose names start with a configurable prefix (default `DOC_`).
@@ -36,6 +32,15 @@ The command stops with a clear error message whenever a required file is missing
 
 ```bash
 go build -o bin/doc-builder ./cmd/docbuilder
+```
+
+## Testing
+
+Run the unit test suite—covering front-matter parsing, sidebar generation, and
+filesystem helpers—with:
+
+```bash
+go test ./...
 ```
 
 ## Usage
