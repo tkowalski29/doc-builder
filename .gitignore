@@ -1,0 +1,20 @@
+.DS_Store
+
+# CUSTOM
+## CC
+.claude/*
+.claude/**/*
+.gemini/*
+.gemini/**/*
+.codex/*
+.codex/**/*
+.spec/*
+
+# DOC
+build-docs.sh
+.doc/.vitepress/dist/
+.doc/.vitepress/.temp/
+.doc/.vitepress/cache/
+.doc/.vitepress/config.js
+.doc/node_modules/
+.doc/temp/
