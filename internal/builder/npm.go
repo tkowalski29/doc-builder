@@ -37,6 +37,7 @@ func (b *Builder) installDependencies(ctx context.Context, env environment) erro
 		fmt.Println("  running npm install (this may take a while)")
 	}
 
+	//nolint:gosec // npm install is safe in controlled environment
 	cmd := exec.CommandContext(ctx, "npm", "install")
 	cmd.Dir = env.tempDir
 	cmd.Stdout = os.Stdout
@@ -52,6 +53,7 @@ func (b *Builder) buildSite(ctx context.Context, env environment) error {
 		fmt.Println("[6/7] Running npm run docs:build")
 	}
 
+	//nolint:gosec // npm run is safe in controlled environment
 	cmd := exec.CommandContext(ctx, "npm", "run", "docs:build")
 	cmd.Dir = env.tempDir
 	cmd.Stdout = os.Stdout

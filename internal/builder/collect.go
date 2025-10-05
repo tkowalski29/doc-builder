@@ -47,6 +47,7 @@ func (b *Builder) collectPrefixedDocs(env environment, recordSet map[string]stru
 			return nil
 		}
 
+		//nolint:gosec // file path is validated and safe
 		data, err := os.ReadFile(path)
 		if err != nil {
 			return fmt.Errorf("failed to read %s: %w", path, err)
@@ -127,6 +128,7 @@ func (b *Builder) collectExistingDocs(env environment, recordSet map[string]stru
 			return nil
 		}
 
+		//nolint:gosec // file path is validated and safe
 		data, err := os.ReadFile(path)
 		if err != nil {
 			return fmt.Errorf("failed to read %s: %w", path, err)

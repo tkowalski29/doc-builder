@@ -30,6 +30,7 @@ func samePath(a, b string) bool {
 }
 
 func copyFile(src, dst string) error {
+	//nolint:gosec // file paths are validated and safe
 	input, err := os.ReadFile(src)
 	if err != nil {
 		return fmt.Errorf("failed to read %s: %w", src, err)
@@ -37,6 +38,7 @@ func copyFile(src, dst string) error {
 	if err := os.MkdirAll(filepath.Dir(dst), 0o755); err != nil {
 		return fmt.Errorf("failed to prepare directory for %s: %w", dst, err)
 	}
+	//nolint:gosec // file permissions are appropriate for documentation files
 	if err := os.WriteFile(dst, input, 0o644); err != nil {
 		return fmt.Errorf("failed to write %s: %w", dst, err)
 	}

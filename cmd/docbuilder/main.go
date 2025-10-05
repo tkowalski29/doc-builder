@@ -157,6 +157,7 @@ documentation.
 - You can add more keys to the front matter if the theme supports them.
 `, createdAt)
 
+	//nolint:gosec // file permissions are appropriate for documentation files
 	if err := os.WriteFile(filePath, []byte(content), 0o644); err != nil {
 		return fmt.Errorf("failed to create example file %s: %w", filePath, err)
 	}
