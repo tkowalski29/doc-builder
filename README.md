@@ -5,6 +5,11 @@ CLI. It scans a project for prefixed markdown files, assembles a temporary ViteP
 workspace, and produces a ready-to-ship `dist` directory without requiring any
 manual steps.
 
+## TODO
+
+- [ ] dopisanie testow jednostkowych
+- [ ] github workflows ktory zbuduje paczki i instrukcja jak je uruchomic w innym workflow
+
 ## Features
 
 - Discover markdown files whose names start with a configurable prefix (default `DOC_`).
@@ -106,4 +111,4 @@ additional engines beyond VitePress.
 
 ## License
 
-This project is released under the [MIT License](LICENSE).
+This project is released under the [Apache 2.0 License](LICENSE).

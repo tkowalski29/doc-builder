@@ -1,5 +1,8 @@
 .DS_Store
 
+.gocache/
+bin/
+
 # CUSTOM
 ## CC
 .claude/*
