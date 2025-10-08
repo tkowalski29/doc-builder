@@ -3,6 +3,12 @@
 .gocache/
 bin/
 
+## EXAMPLE
+example/**/doc-builder
+example/**/.vitepress/config.js
+example/**/.vitepress/dist/
+example/**/temp/
+
 # CUSTOM
 ## CC
 .claude/*
@@ -20,9 +26,3 @@ bin/
 .doc/.vitepress/config.js
 .doc/node_modules/
 .doc/temp/
-
-## EXAMPLE
-example/**/doc-builder
-example/**/.vitepress/config.js
-example/**/.vitepress/dist/
-example/**/temp/
